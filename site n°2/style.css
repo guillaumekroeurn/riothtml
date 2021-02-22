@@ -1,0 +1,482 @@
+/* Design général -------------------------------------------------- */
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+/* Design typographique -------------------------------------------- */
+
+/* Titre */
+h1,h2,h3,h4{
+	font-family: arial;
+}
+
+h1{
+	color: white;
+	margin-right: 58vw;
+}
+
+/* Textes */
+p,a,li{
+	font-family: arial;
+	font-size: 12px;
+}
+
+
+/* Header ---------------------------------------------------------- */
+header{
+	width: 100vw;
+	height: 10vh;
+	background-image: linear-gradient(to right, #434343 0%, black 100%);
+	display: flex;
+	justify-content: space-between; 
+	align-items: center;
+	position: fixed;
+	box-shadow: 0px 5px 10px #bf0b0b;
+}
+
+.logo{
+	height: 10vh;
+}
+
+.menufantome{
+	width: 100vw;
+	height: 10vh;
+}
+
+.boutonMenu{
+	color: #db3737;
+	text-decoration: none;
+	margin-right: 25px;
+	font-size: 20px;
+}
+
+label{
+	font-size: 30px;
+	display: none;
+}
+
+#switch {
+	display: none;
+} 
+
+nav a:hover{
+	background-color: white;
+}
+
+/* Header Media Queries -------------------------------------------- */
+@media (max-width: 600px){
+	header{
+		display: block;
+	}
+
+	.introduction{
+		float: left;
+	}
+
+	label {
+		display: block;
+		float: right;
+		color: #bf0b0b;
+		margin-top: 3vw;
+		margin-right: 3vw;
+	}
+
+	nav{
+		display: none;
+	}
+
+	#switch:checked + nav{
+		display: block;
+		clear: both;
+	}
+
+	nav a{
+		width: 100%;
+		display: block;
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		background-color: black;
+		border-bottom: 4px solid #bf0b0b;	
+	}
+}
+
+/* Section 1 ------------------------------------------------------- */
+.imagesetup{
+	width: 100vw;
+	min-height: 90vh;
+	background-image: url(image/setupgaming.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	display: flex;
+	align-items: center;
+}
+
+.bloc1{
+	width: 30vw;
+	min-height: 45vh;
+	background-color: rgba(0,255,0,0.5);
+	margin-left: 5vw;
+	margin-bottom: 10vw;
+}
+
+.description1{
+	font-size: 30px;
+	text-align: left;
+	margin-top: 1vw;
+	margin-left: 1vw;
+}
+
+.description2{
+	font-size: 20px;
+	text-align: left;
+	margin-top: 1vw;
+	margin-bottom: 1vw;
+	margin-left: 1vw;
+}
+
+.plusinfo{
+	font-size: 40px;
+	color: #bf0b0b;
+	margin-left: 6.5vw;
+}
+
+.section1{
+	width: 100vw;
+	min-height: 90vh;
+	background-image: linear-gradient(to right, #434343 0%, black 100%);
+
+}
+
+@media (max-width: 600px){
+	.bloc1{
+		width: 410px;
+		padding-top: 30px;
+	}
+}
+
+/* Section 2 ------------------------------------------------------- */
+.section2{
+	width: 100vw;
+	min-height: 90vh;
+	background-image: linear-gradient(to right, #434343 0%, black 100%);
+	box-shadow: 0px -5px 10px #bf0b0b;
+}
+
+.blocsection2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.date{
+	width: 20%;
+	font-size: 50px;
+	text-align: center;
+	background-color: #bf0b0b;
+	margin-right: 5vw;
+	color: white;
+}
+
+.miniaturejeux{
+	width: 30%;
+	margin: 20px;
+	border-radius: 50%;
+	border: 4px solid red;
+	box-shadow: 0px 0px 20px white;
+}
+
+.miniaturejeux:hover{
+	box-shadow: 0px 0px 10px rgba(0 ,0 ,0 ,0.5);
+	filter: blur(0px);
+	animation-name: Rondeur;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes Rondeur {
+	0%{border-radius: 50%;filter: saturate(0);}
+	100%{border-radius: 0px;filter: saturate(1)}
+}
+
+.textesection2{
+	width: 20%;
+	color: white;
+	font-size: 20px;
+	margin-left: 5vw;
+}
+
+@media (max-width: 600px){
+	.miniaturejeux{
+		width: 300px;
+		margin-bottom: 5vh;
+	}
+
+	.blocsection2{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.date{
+		margin-left: 6vw;
+		margin-bottom: 2vh;
+
+	}
+
+	.textesection2{
+		width: 400px;
+		text-align: center;
+	}
+}
+
+/* Section 3 ------------------------------------------------------- */
+.section3{
+	width: 100vw;
+	min-height: 90vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border-top: 5px double red;
+	border-bottom: 5px double red;
+	background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+.blocsection3{
+	text-align: center;
+	width: 25%;
+	min-height: 40vh;
+	margin-bottom: 10vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 15vw;
+}
+
+.blocsection3bis{
+	text-align: center;
+	width: 25%;
+	min-height: 40vh;
+	margin-bottom: 10vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.logo2{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 10px double orange;
+	box-shadow: 0px 0px 25px yellow;
+}
+
+.logo2bis{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 10px double white;
+	box-shadow: 0px 0px 40px red;
+}
+
+.texte{
+	background-color: red;
+	margin-top: 2vw;
+	font-size: 35px;
+}
+
+.texte2{
+	background-color: red;
+	margin-top: 2vw;
+	font-size: 35px;
+}
+
+.textebis{
+	background-color: yellow;
+	margin-top: 2vw;
+	font-size: 40px;
+}
+
+.bio1{
+	font-size: 25px;
+	margin-top: 2vw;
+	color: white;
+	text-align: left;
+}
+
+.bio2{
+	font-size: 25px;
+	margin-top: 2vw;
+	color: white;
+	text-align: center;
+}
+
+.bio3{
+	font-size: 25px;
+	margin-top: 2vw;
+	color: white;
+	text-align: right;
+}
+
+@media (max-width: 600px){
+	.texte{
+		font-size: 15px;
+		margin-left: 3vw;
+	}
+
+	.textebis{
+		font-size: 20px;
+		margin-left: 3vw;
+	}
+
+	.texte2{
+		font-size: 15px;
+		margin-left: 3vw;
+	}
+
+	.bio1{
+		font-size: 18px;
+		margin-left: 3vw;
+	}
+
+	.bio2{
+		font-size: 21px;
+		margin-left: 3vw;
+	}
+
+	.bio3{
+		font-size: 18px;
+	}
+}
+
+/* Section 4 ------------------------------------------------------- */
+.section4a{
+	background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+.titresection4{
+	text-align: center;
+	color: white;
+	font-size: 50px;
+	padding-top: 50px;
+}
+
+.section4{
+	width: 100vw;
+	min-height: 90vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border-bottom: 5px double red; 
+}
+
+.blocsection4{
+	text-align: center;
+	width: 25%;
+	min-height: 40vh;
+}
+
+.blocsection4bis{
+	text-align: center;
+	width: 25%;
+	min-height: 40vh;
+	margin-bottom: 13vh;
+	align-content: center;
+}
+
+.logojeux{
+	width: 15vw;
+	min-height: 20vh;
+	margin-bottom: 5vw;
+	border: 4px groove white;
+	box-shadow: 0px 0px 20px red;
+}
+
+.textesection4{
+	width: 15vw;
+	color: #bf0b0b;
+	font-size: 15px;
+	text-align: center;
+	margin-left: 5vw;
+}
+
+@media (max-width: 600px){
+	.logojeux{
+		width: 175px;
+	}
+
+	.textesection4{
+		font-size: 10px;
+		width: 25vw;
+		margin-left: 5vw;
+	}
+
+	.blocsection4{
+		margin-bottom: 6vh;
+	}
+}
+
+/* Footer ---------------------------------------------------------- */
+.footer1{
+	width: 100vw;
+	min-height: 90vh;
+	background-color: white;
+}
+
+.blocsection5{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 5vh;
+	padding-top: 50px;
+}
+
+.logofooter{
+	width: 10%;
+	height: 5%;
+}
+
+.logofooter1{
+	width: 5%;
+	height: 5%;
+}
+
+.lien{
+	color: red;
+	text-decoration: none;
+	margin-bottom: 5vw;
+	font-size: 20px;
+	margin-top: 1vw;
+}
+
+footer{
+	width: 100vw;
+	height: 10vh;
+	background-image: linear-gradient(to right, #434343 0%, black 100%);
+	display: flex;
+	justify-content: space-between; 
+	align-items: center;
+	box-shadow: 0px -5px 10px #bf0b0b;
+}
+
+footer a{
+	color: #db3737;
+	text-decoration: none;
+	margin-right: 25px;
+	font-size: 20px;
+
+}
+
+footer a:hover{
+	background-color: pink;
+}
